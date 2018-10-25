@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  
+
+//  Created by Ahmed's Mac on 24/10/18.
+//  Copyright © 2018 Ahmed Abdallah. All rights reserved.
+*/
+
+
+"intro" = "ماي فاتورة ستساعدك على تجاوز الأعباء التجارية سواء كنت صاحب مشروع صغير أو شركة كبيرة"  ;
+"selecetLang" = "برجاء اختيار اللغة" ;

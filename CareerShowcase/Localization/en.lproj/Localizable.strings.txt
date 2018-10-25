@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+ 
+
+//  Created by Ahmed's Mac on 24/10/18.
+//  Copyright © 2018 Ahmed Abdallah. All rights reserved.
+*/
+"intro" = "WHETHER YOU ARE A START-UP OR A LARGE CORPORATION, MYFATOORAH WILL REDUCE YOUR BUSINESS PAIN!" ;
+"selecetLang" = "Please choose your Language" ;
+
