@@ -93,7 +93,7 @@ extension CareerShowcaseService: TargetType {
     }
 
     static let prtc = "http"
-    static let base = "www.joker.com.tr/rest/v1"
+    static let base = ""
     static let port = ""
     
     var baseURL: URL {
