@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "this-book-is-so-huge-and-i-have-to-read-it-all-2.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "this-book-is-so-huge-and-i-have-to-read-it-all-2.jpg",
       "scale" : "2x"
     },
     {
