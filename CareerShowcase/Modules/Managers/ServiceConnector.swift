@@ -12,7 +12,10 @@ import SwiftyJSON
 
 enum CareerShowcaseService {
     case getOverview
-    
+    case getEducation
+    case getWork
+    case getSkills
+    case getContact
 }
 
 class ServiceConnector {
@@ -93,7 +96,7 @@ extension CareerShowcaseService: TargetType {
     }
 
     static let prtc = "http"
-    static let base = ""
+    static let base = "www.mocky.io/v2"
     static let port = ""
     
     var baseURL: URL {
@@ -109,13 +112,21 @@ extension CareerShowcaseService: TargetType {
     var path: String {
         switch self {
         case .getOverview:
-            return ""
+            return "/5bd255a22f0000a23dd8fffb"
+        case .getEducation:
+            return "/5bd25a762f00000f00d90005"
+        case .getWork:
+            return "/5bd266a33400005600cfdd5d"
+        case .getSkills:
+            return "/5bd2693a3400006100cfdd60"
+        case .getContact:
+            return "/5bd26a903400005100cfdd61"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .getOverview:
+        case .getOverview, .getEducation:
             return .get
         default:
             return .post

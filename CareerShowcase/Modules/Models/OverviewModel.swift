@@ -12,7 +12,8 @@ import SwiftyJSON
 class OverviewModel : NSObject, NSCoding{
     
     var imageUrl : String!
-    var overviewContent : String!
+    var overView : String!
+    var overViewId : Int!
     
     
     /**
@@ -23,7 +24,8 @@ class OverviewModel : NSObject, NSCoding{
             return
         }
         imageUrl = json["imageUrl"].stringValue
-        overviewContent = json["overviewContent"].stringValue
+        overView = json["overView"].stringValue
+        overViewId = json["overView_Id"].intValue
     }
     override init() {
         
@@ -37,8 +39,11 @@ class OverviewModel : NSObject, NSCoding{
         if imageUrl != nil{
             dictionary["imageUrl"] = imageUrl
         }
-        if overviewContent != nil{
-            dictionary["overviewContent"] = overviewContent
+        if overView != nil{
+            dictionary["overView"] = overView
+        }
+        if overViewId != nil{
+            dictionary["overView_Id"] = overViewId
         }
         return dictionary
     }
@@ -50,7 +55,8 @@ class OverviewModel : NSObject, NSCoding{
     @objc required init(coder aDecoder: NSCoder)
     {
         imageUrl = aDecoder.decodeObject(forKey: "imageUrl") as? String
-        overviewContent = aDecoder.decodeObject(forKey: "overviewContent") as? String
+        overView = aDecoder.decodeObject(forKey: "overView") as? String
+        overViewId = aDecoder.decodeObject(forKey: "overView_Id") as? Int
         
     }
     
@@ -63,11 +69,15 @@ class OverviewModel : NSObject, NSCoding{
         if imageUrl != nil{
             aCoder.encode(imageUrl, forKey: "imageUrl")
         }
-        if overviewContent != nil{
-            aCoder.encode(overviewContent, forKey: "overviewContent")
+        if overView != nil{
+            aCoder.encode(overView, forKey: "overView")
+        }
+        if overViewId != nil{
+            aCoder.encode(overViewId, forKey: "overView_Id")
         }
         
     }
+
     static func overViewFrom(json: JSON?) -> OverviewModel! {
         var overview = OverviewModel()
         if let j = json {

@@ -20,23 +20,35 @@ class OverviewViewController: BaseViewController {
 //        }
         // Do any additional setup after loading the view.
         getOverviewData()
-        loadWebviewContent()
     }
     func getOverviewData()
     {
-        //I prefered Moya more thank Alamofire, but I had an error in the configraution file and it consumed long time so I used this hard solution
+        self.startAnimating()
         ServiceConnector.shared.connect(.getOverview, success: { (target, response) in
-            print(response)
-            self.overviewModel = OverviewModel.overViewFrom(json: response)
+            self.stopAnimating()
+            if (response["status"]).int == 200
+            {
+            self.overviewModel = OverviewModel.init(fromJson: response["data"])
+                self.updateUIView()
+            }
         })
     }
-    func loadWebviewContent()
-    {
-        
-        let htmlString = "Experienced iOS Developer with a demonstrated history of working in the computer software industry. Strong engineering professional with a Bachelor's degree focused in Computer Science from Assiut University."
-        overviewWebview.loadHTMLString(htmlString, baseURL: nil)
-        
+    func updateUIView() {
+        if let overView = overviewModel
+        {
+        if let image = overView.imageUrl {
+            let url = URL(string: image)!
+            overviewUserImageView.af_setImage(withURL: url)
+        }
+        if let overViewContent = overView.overView
+        {
+       
+            let htmlString = overViewContent
+            overviewWebview.loadHTMLString(htmlString, baseURL: nil)
+        }
+        }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

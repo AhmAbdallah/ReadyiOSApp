@@ -9,46 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CareerShowcase/Modules/Controllers/Overview/OverviewViewController.swift"
-            timestampString = "562197950.547539"
+            filePath = "CareerShowcase/Modules/Controllers/Education/EducationViewController.swift"
+            timestampString = "562209698.032938"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getOverviewData()"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getEducationData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CareerShowcase.OverviewViewController.getOverviewData() -&gt; ()"
-                  moduleName = "CareerShowcase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///APPS/MyFatoorah/AmyalMall/CareerShowcase/Modules/Controllers/Overview/OverviewViewController.swift"
-                  timestampString = "562197956.9985271"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CareerShowcase.CareerShowcaseService, SwiftyJSON.JSON) -&gt; () in CareerShowcase.OverviewViewController.getOverviewData() -&gt; ()"
-                  moduleName = "CareerShowcase"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///APPS/MyFatoorah/AmyalMall/CareerShowcase/Modules/Controllers/Overview/OverviewViewController.swift"
-                  timestampString = "562197957.000486"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -57,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CareerShowcase/Modules/Controllers/Overview/OverviewViewController.swift"
-            timestampString = "562197950.547892"
+            filePath = "CareerShowcase/Modules/Controllers/Education/EducationViewController.swift"
+            timestampString = "562209698.033005"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "getOverviewData()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getEducationData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

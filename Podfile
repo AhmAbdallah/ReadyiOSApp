@@ -7,7 +7,7 @@ target 'CareerShowcase' do
 
   pod 'Moya'
   pod 'SwiftyJSON'
-  pod 'AlamofireImage', '~> 3.1'
+  #pod 'AlamofireImage', '~> 3.1'
   pod 'Whisper'
 
   pod 'NVActivityIndicatorView'

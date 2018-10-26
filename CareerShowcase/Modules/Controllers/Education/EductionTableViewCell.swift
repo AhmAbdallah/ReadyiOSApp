@@ -9,8 +9,9 @@
 import UIKit
 
 class EductionTableViewCell: UITableViewCell {
-    @IBOutlet weak var educationTitle: UILabel!
-    @IBOutlet weak var educationDetails: UILabel!
+    @IBOutlet weak var educationNameLBL: UILabel!
+    @IBOutlet weak var educationDescriptionLBL: UILabel!
+    @IBOutlet weak var educationDurationLBL: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

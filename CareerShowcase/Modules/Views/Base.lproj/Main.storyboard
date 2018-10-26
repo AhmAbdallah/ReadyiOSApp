@@ -13,7 +13,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="FFW-pk-WnI">
             <objects>
-                <viewController storyboardIdentifier="SplashScreenViewController" id="vWA-ZG-QKY" customClass="SplashScreenViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashScreenViewController" id="vWA-ZG-QKY" customClass="SplashScreenViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kWD-Bd-Nuq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,27 +39,30 @@
         <!--Work-->
         <scene sceneID="cUD-PV-t2K">
             <objects>
-                <viewController storyboardIdentifier="WorkViewController" id="tbr-gN-zhg" customClass="WorkViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkViewController" id="tbr-gN-zhg" customClass="WorkViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vzz-GR-pGI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gMm-ms-SPs">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6a-dy-Y4I">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gMm-ms-SPs" firstAttribute="bottom" secondItem="qw1-QL-J8Q" secondAttribute="bottom" id="7r1-pc-Vid"/>
-                            <constraint firstItem="gMm-ms-SPs" firstAttribute="top" secondItem="qw1-QL-J8Q" secondAttribute="top" id="aEV-w4-Cm2"/>
-                            <constraint firstItem="gMm-ms-SPs" firstAttribute="trailing" secondItem="qw1-QL-J8Q" secondAttribute="trailing" id="gtl-co-XcH"/>
-                            <constraint firstItem="gMm-ms-SPs" firstAttribute="leading" secondItem="qw1-QL-J8Q" secondAttribute="leading" id="pJQ-09-cCs"/>
+                            <constraint firstItem="A6a-dy-Y4I" firstAttribute="leading" secondItem="qw1-QL-J8Q" secondAttribute="leading" id="E8U-WF-wCe"/>
+                            <constraint firstItem="A6a-dy-Y4I" firstAttribute="top" secondItem="qw1-QL-J8Q" secondAttribute="top" id="Y6q-ZH-IJT"/>
+                            <constraint firstItem="A6a-dy-Y4I" firstAttribute="trailing" secondItem="qw1-QL-J8Q" secondAttribute="trailing" id="keh-1k-p4y"/>
+                            <constraint firstItem="A6a-dy-Y4I" firstAttribute="bottom" secondItem="qw1-QL-J8Q" secondAttribute="bottom" id="qO0-9U-ePM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qw1-QL-J8Q"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Work" image="ic-Work" id="cbT-9b-01J"/>
                     <navigationItem key="navigationItem" id="CPA-D6-kqo"/>
+                    <connections>
+                        <outlet property="workTableView" destination="A6a-dy-Y4I" id="yD6-ef-xaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdD-zl-Lgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,23 +71,18 @@
         <!--Skills-->
         <scene sceneID="VXu-aC-Knf">
             <objects>
-                <viewController storyboardIdentifier="SkillsViewController" automaticallyAdjustsScrollViewInsets="NO" id="tAR-T5-gF7" customClass="SkillsViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SkillsViewController" automaticallyAdjustsScrollViewInsets="NO" id="tAR-T5-gF7" customClass="SkillsViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nGE-gi-hBV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WFe-hC-sHV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-q3-6bG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="WFe-hC-sHV" firstAttribute="leading" secondItem="ZAF-9k-BSN" secondAttribute="leading" id="3PT-uq-16e"/>
-                            <constraint firstItem="WFe-hC-sHV" firstAttribute="trailing" secondItem="ZAF-9k-BSN" secondAttribute="trailing" id="CDK-ai-QlO"/>
-                            <constraint firstItem="WFe-hC-sHV" firstAttribute="bottom" secondItem="ZAF-9k-BSN" secondAttribute="bottom" id="Q6a-gE-oVg"/>
-                            <constraint firstItem="WFe-hC-sHV" firstAttribute="top" secondItem="ZAF-9k-BSN" secondAttribute="top" id="fOT-fN-Xed"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAF-9k-BSN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Skills" image="ic-Skills" id="lcS-g8-Ndx"/>
@@ -92,6 +90,9 @@
                         <barButtonItem key="leftBarButtonItem" image="shoppingBag" id="uBT-j7-lVs"/>
                         <barButtonItem key="rightBarButtonItem" image="menu" id="fJC-9s-5gr"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="skillsTableView" destination="wJH-q3-6bG" id="PGR-IB-xCU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xzs-Rx-6vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,26 +101,29 @@
         <!--Contact-->
         <scene sceneID="JeS-XG-I7r">
             <objects>
-                <viewController storyboardIdentifier="ContactViewController" id="jpw-qN-ojK" customClass="ContactViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactViewController" id="jpw-qN-ojK" customClass="ContactViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBi-HL-bw5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXR-Eg-7Pa">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eHT-U0-bHp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jXR-Eg-7Pa" firstAttribute="leading" secondItem="x6v-HA-0YT" secondAttribute="leading" id="dsB-hG-Z7U"/>
-                            <constraint firstItem="jXR-Eg-7Pa" firstAttribute="trailing" secondItem="x6v-HA-0YT" secondAttribute="trailing" id="psn-9R-waN"/>
-                            <constraint firstItem="jXR-Eg-7Pa" firstAttribute="bottom" secondItem="x6v-HA-0YT" secondAttribute="bottom" id="q7I-mk-J6j"/>
-                            <constraint firstItem="jXR-Eg-7Pa" firstAttribute="top" secondItem="x6v-HA-0YT" secondAttribute="top" id="uxA-T2-7vT"/>
+                            <constraint firstItem="eHT-U0-bHp" firstAttribute="trailing" secondItem="x6v-HA-0YT" secondAttribute="trailing" id="D9g-PP-hrL"/>
+                            <constraint firstItem="eHT-U0-bHp" firstAttribute="leading" secondItem="x6v-HA-0YT" secondAttribute="leading" id="LqL-O5-RUI"/>
+                            <constraint firstItem="eHT-U0-bHp" firstAttribute="top" secondItem="x6v-HA-0YT" secondAttribute="top" id="VL1-XL-Dcr"/>
+                            <constraint firstItem="eHT-U0-bHp" firstAttribute="bottom" secondItem="x6v-HA-0YT" secondAttribute="bottom" id="fEX-te-5QB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x6v-HA-0YT"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact" image="ic-Contact" id="fuo-7l-HlE"/>
+                    <connections>
+                        <outlet property="contactTableView" destination="eHT-U0-bHp" id="3Jt-1u-915"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6EQ-ms-gya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,7 +132,7 @@
         <!--Base Tab Bar Controller-->
         <scene sceneID="Nfa-Tq-BTm">
             <objects>
-                <tabBarController storyboardIdentifier="BaseTabBarController" id="ET0-MW-qdL" customClass="BaseTabBarController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="BaseTabBarController" id="ET0-MW-qdL" customClass="BaseTabBarController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cyK-Zf-V1V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,14 +161,14 @@
         <!--Education-->
         <scene sceneID="6hM-6m-Ksu">
             <objects>
-                <viewController storyboardIdentifier="EducationViewController" automaticallyAdjustsScrollViewInsets="NO" id="O8w-Pt-ida" customClass="EducationViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EducationViewController" automaticallyAdjustsScrollViewInsets="NO" id="O8w-Pt-ida" customClass="EducationViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUo-D5-Jrd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZE7-sO-f0v">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZE7-sO-f0v">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,17 +188,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHD-KC-8Ds" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6892" y="449.32533733133437"/>
+            <point key="canvasLocation" x="6689" y="407"/>
         </scene>
         <!--Overview-->
         <scene sceneID="sw8-AX-ZME">
             <objects>
-                <viewController storyboardIdentifier="OverviewViewController" id="UBo-dP-o3f" customClass="OverviewViewController" customModule="Ahmed_Abdallah" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OverviewViewController" id="UBo-dP-o3f" customClass="OverviewViewController" customModule="CareerShowcase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fDB-a6-pCH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-picture-300x300" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-5W-YmY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-5W-YmY">
                                 <rect key="frame" x="138" y="45" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="bFE-RV-Ydy"/>
@@ -244,7 +248,6 @@
         <image name="ic-Skills" width="40" height="40"/>
         <image name="ic-Work" width="25" height="25"/>
         <image name="menu" width="16" height="16"/>
-        <image name="profile-picture-300x300" width="384" height="512"/>
         <image name="shoppingBag" width="16" height="16"/>
     </resources>
 </document>
