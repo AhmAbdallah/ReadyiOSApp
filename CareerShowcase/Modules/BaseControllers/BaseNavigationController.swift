@@ -32,7 +32,7 @@ class BaseNavigationController: UINavigationController {
             self.navigationItem.titleView = UIImageView(image: UIImage(named: "navLogo"))
         }
         
-        func alert(title: String = "اميال", message: String? = nil, completion: ((UIAlertAction) -> Void)? = nil) {
+        func alert(title: String = "", message: String? = nil, completion: ((UIAlertAction) -> Void)? = nil) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "تم", style: .default, handler: completion))
             self.present(alert, animated: true, completion: nil)

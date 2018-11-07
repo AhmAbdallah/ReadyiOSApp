@@ -37,9 +37,9 @@ class BaseViewController: UIViewController, NVActivityIndicatorViewable {
     func showConnectionReachabilityMessage() {
         let message : String!
         let wishperBackgroundColor : UIColor!
-        message = "الرجاء الاتصال بالانترنت"
+        message = "Please check your Internet"
         wishperBackgroundColor = UIColor.red
-        let announcement = Announcement(title: "اميال مول", subtitle: message, image: UIImage(named: "avatar"))
+        let announcement = Announcement(title: "", subtitle: message, image: UIImage(named: "avatar"))
         ColorList.Shout.background = wishperBackgroundColor
         ColorList.Shout.title = .white
         ColorList.Shout.subtitle = .white
@@ -144,9 +144,9 @@ class BaseTableViewController: UITableViewController, NVActivityIndicatorViewabl
     func showConnectionReachabilityMessage() {
         let message : String!
         let wishperBackgroundColor : UIColor!
-        message = "الرجاء الاتصال بالانترنت"
+        message = "Please check your Internet"
         wishperBackgroundColor = UIColor.red
-        let announcement = Announcement(title: "اميال مول", subtitle: message, image: UIImage(named: "avatar"))
+        let announcement = Announcement(title: "", subtitle: message, image: UIImage(named: "avatar"))
         ColorList.Shout.background = wishperBackgroundColor
         ColorList.Shout.title = .white
         ColorList.Shout.subtitle = .white
