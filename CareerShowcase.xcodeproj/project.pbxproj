@@ -9,17 +9,6 @@
 /* Begin PBXBuildFile section */
 		1C6D6AC2C24BF2AC914BF2D8 /* Pods_CareerShowcaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540AA2B113262D7AB33840F5 /* Pods_CareerShowcaseTests.framework */; };
 		28F8E91F621C69B6C3D804E8 /* Pods_CareerShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C4F4C41E4C7BE109E3A142 /* Pods_CareerShowcase.framework */; };
-		C72CD9E2218287B7004DA86E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C72CD9D6218287B7004DA86E /* LICENSE */; };
-		C72CD9E3218287B7004DA86E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9D8218287B7004DA86E /* ImageCache.swift */; };
-		C72CD9E4218287B7004DA86E /* UIImage+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9D9218287B7004DA86E /* UIImage+AlamofireImage.swift */; };
-		C72CD9E5218287B7004DA86E /* AFIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DA218287B7004DA86E /* AFIError.swift */; };
-		C72CD9E6218287B7004DA86E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DB218287B7004DA86E /* Image.swift */; };
-		C72CD9E7218287B7004DA86E /* UIButton+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DC218287B7004DA86E /* UIButton+AlamofireImage.swift */; };
-		C72CD9E8218287B7004DA86E /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DD218287B7004DA86E /* ImageDownloader.swift */; };
-		C72CD9E9218287B7004DA86E /* UIImageView+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DE218287B7004DA86E /* UIImageView+AlamofireImage.swift */; };
-		C72CD9EA218287B7004DA86E /* Request+AlamofireImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9DF218287B7004DA86E /* Request+AlamofireImage.swift */; };
-		C72CD9EB218287B7004DA86E /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9E0218287B7004DA86E /* ImageFilter.swift */; };
-		C72CD9EC218287B7004DA86E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C72CD9E1218287B7004DA86E /* README.md */; };
 		C72CD9F2218291CB004DA86E /* EducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F1218291CB004DA86E /* EducationModel.swift */; };
 		C72CD9F4218297D2004DA86E /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F3218297D2004DA86E /* EducationViewController.swift */; };
 		C72CD9F621829C73004DA86E /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F521829C73004DA86E /* WorkModel.swift */; };
@@ -85,17 +74,6 @@
 		48D2BCDF2DC079BFEAE72EC8 /* Pods-CareerShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareerShowcase/Pods-CareerShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 		4CB8211227D95573A03F83D3 /* Pods-CareerShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerShowcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareerShowcase/Pods-CareerShowcase.release.xcconfig"; sourceTree = "<group>"; };
 		540AA2B113262D7AB33840F5 /* Pods_CareerShowcaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareerShowcaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C72CD9D6218287B7004DA86E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C72CD9D8218287B7004DA86E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		C72CD9D9218287B7004DA86E /* UIImage+AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AlamofireImage.swift"; sourceTree = "<group>"; };
-		C72CD9DA218287B7004DA86E /* AFIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFIError.swift; sourceTree = "<group>"; };
-		C72CD9DB218287B7004DA86E /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		C72CD9DC218287B7004DA86E /* UIButton+AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+AlamofireImage.swift"; sourceTree = "<group>"; };
-		C72CD9DD218287B7004DA86E /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		C72CD9DE218287B7004DA86E /* UIImageView+AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+AlamofireImage.swift"; sourceTree = "<group>"; };
-		C72CD9DF218287B7004DA86E /* Request+AlamofireImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Request+AlamofireImage.swift"; sourceTree = "<group>"; };
-		C72CD9E0218287B7004DA86E /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
-		C72CD9E1218287B7004DA86E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C72CD9F1218291CB004DA86E /* EducationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationModel.swift; sourceTree = "<group>"; };
 		C72CD9F3218297D2004DA86E /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		C72CD9F521829C73004DA86E /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
@@ -192,32 +170,6 @@
 				33A78809B785376D3EB90907 /* Pods-CareerShowcaseUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		C72CD9D5218287B7004DA86E /* AlamofireImage */ = {
-			isa = PBXGroup;
-			children = (
-				C72CD9D6218287B7004DA86E /* LICENSE */,
-				C72CD9D7218287B7004DA86E /* Source */,
-				C72CD9E1218287B7004DA86E /* README.md */,
-			);
-			path = AlamofireImage;
-			sourceTree = "<group>";
-		};
-		C72CD9D7218287B7004DA86E /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				C72CD9D8218287B7004DA86E /* ImageCache.swift */,
-				C72CD9D9218287B7004DA86E /* UIImage+AlamofireImage.swift */,
-				C72CD9DA218287B7004DA86E /* AFIError.swift */,
-				C72CD9DB218287B7004DA86E /* Image.swift */,
-				C72CD9DC218287B7004DA86E /* UIButton+AlamofireImage.swift */,
-				C72CD9DD218287B7004DA86E /* ImageDownloader.swift */,
-				C72CD9DE218287B7004DA86E /* UIImageView+AlamofireImage.swift */,
-				C72CD9DF218287B7004DA86E /* Request+AlamofireImage.swift */,
-				C72CD9E0218287B7004DA86E /* ImageFilter.swift */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		C7A3DFB420D6EEA3009E6B5E = {
@@ -392,7 +344,6 @@
 		C7F40E1B20E03EBC0003C671 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C72CD9D5218287B7004DA86E /* AlamofireImage */,
 				C7F40E1C20E03EBC0003C671 /* Constants.swift */,
 				C7F40E1D20E03EBC0003C671 /* Extension */,
 				C7F40E2720E03EBC0003C671 /* AlertControllerHelper.swift */,
@@ -528,10 +479,8 @@
 				C7615DB92182A683004628A1 /* LunchScreen in Resources */,
 				C7DA8C292182548100656E5C /* EductionTableViewCell.xib in Resources */,
 				C7A3DFCB20D6EEA6009E6B5E /* LaunchScreen.storyboard in Resources */,
-				C72CD9E2218287B7004DA86E /* LICENSE in Resources */,
 				C7A3DFC820D6EEA6009E6B5E /* Assets.xcassets in Resources */,
 				C7A3DFC620D6EEA3009E6B5E /* Main.storyboard in Resources */,
-				C72CD9EC218287B7004DA86E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +545,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CareerShowcase/Pods-CareerShowcase-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
@@ -605,6 +555,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -651,33 +602,24 @@
 				C72CD9F821829FDC004DA86E /* SkillsModel.swift in Sources */,
 				C72CD9F621829C73004DA86E /* WorkModel.swift in Sources */,
 				C7F40E3320E03EBC0003C671 /* UIViewExtension.swift in Sources */,
-				C72CD9E6218287B7004DA86E /* Image.swift in Sources */,
 				C7F40E3420E03EBC0003C671 /* URLExtension.swift in Sources */,
-				C72CD9E3218287B7004DA86E /* ImageCache.swift in Sources */,
 				C7A3DFC120D6EEA3009E6B5E /* AppDelegate.swift in Sources */,
-				C72CD9E9218287B7004DA86E /* UIImageView+AlamofireImage.swift in Sources */,
 				C7DA8C262182548100656E5C /* OverviewViewController.swift in Sources */,
 				C7F40E3820E03EBC0003C671 /* AlertControllerHelper.swift in Sources */,
-				C72CD9E8218287B7004DA86E /* ImageDownloader.swift in Sources */,
 				C7DA8C272182548100656E5C /* SkillsViewController.swift in Sources */,
 				C7A3DFF620D6F77B009E6B5E /* BaseNavigationController.swift in Sources */,
 				C7F40E3620E03EBC0003C671 /* StringExtension.swift in Sources */,
-				C72CD9E7218287B7004DA86E /* UIButton+AlamofireImage.swift in Sources */,
 				C72CD9FA2182A2B4004DA86E /* ContactModel.swift in Sources */,
 				C79176DB20DAFB87000629C9 /* ServiceConnector.swift in Sources */,
-				C72CD9E4218287B7004DA86E /* UIImage+AlamofireImage.swift in Sources */,
 				C7F40E3720E03EBC0003C671 /* UIScrollViewExtension.swift in Sources */,
 				C72CD9F4218297D2004DA86E /* EducationViewController.swift in Sources */,
 				C7F40E2F20E03EBC0003C671 /* UITableViewCellExtension.swift in Sources */,
 				C7F40E3220E03EBC0003C671 /* UIApplicationExtension.swift in Sources */,
 				C7F40E3520E03EBC0003C671 /* UIDeviceExtension.swift in Sources */,
-				C72CD9E5218287B7004DA86E /* AFIError.swift in Sources */,
 				C7F40E3020E03EBC0003C671 /* ExtensionNotification.swift in Sources */,
 				C7F40E2E20E03EBC0003C671 /* Constants.swift in Sources */,
-				C72CD9EB218287B7004DA86E /* ImageFilter.swift in Sources */,
 				C7E44668218272F000B73E7B /* OverviewModel.swift in Sources */,
 				C7BBB33920E442BE00FA1AEF /* BaseTabBarController.swift in Sources */,
-				C72CD9EA218287B7004DA86E /* Request+AlamofireImage.swift in Sources */,
 				C72CD9F2218291CB004DA86E /* EducationModel.swift in Sources */,
 				C7DA8C282182548100656E5C /* ContactViewController.swift in Sources */,
 			);

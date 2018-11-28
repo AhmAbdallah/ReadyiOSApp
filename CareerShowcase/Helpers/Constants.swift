@@ -13,7 +13,7 @@ struct Constants{
    static var PRODUCTS_TYPE_VALUE = "2"
    static var TRAINING_TYPE_VALUE = "3"
    static var menuWidth = 250
-    static var imageBaseURL = "http://demo.csminds.org/MyFatoorah/main/uploads/providers/"
+    static var imageBaseURL = "http://demo.csminds.org/4A5/main/uploads/providers/"
 
     
     

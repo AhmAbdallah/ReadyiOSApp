@@ -1,6 +1,6 @@
 //
 //  UIDeviceExtension.swift
-//  MyFatoorah
+//  4A5
 //
 //  Created by Ahmed Abdallah on 2/11/18.
 //  Copyright © 2018 Ahmed Abdallah. All rights reserved.
