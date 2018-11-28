@@ -7,20 +7,24 @@
 //
 
 import UIKit
-import Alamofire
+import Kingfisher
+
+
 class OverviewViewController: BaseViewController {
     @IBOutlet weak var overviewWebview: UIWebView!
     @IBOutlet weak var overviewUserImageView: UIImageView!
-    var overviewModel : OverviewModel?
+    var overviewViewModel : OverviewViewModel!{
+        didSet{
+            self.overviewUserImageView.kf.setImage(with: self.overviewViewModel!.imageURL)
+            self.overviewWebview.loadHTMLString(self.overviewViewModel!.overViewHTMLString, baseURL: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let imageUrl = offersProducts![indexPath.row].iMAGEPATH {
-//            let url = URL(string: image)!
-//            cell.ProductImageView.af_setImage(withURL: url)
-//        }
-        // Do any additional setup after loading the view.
         getOverviewData()
     }
+    
     func getOverviewData()
     {
         self.startAnimating()
@@ -28,41 +32,9 @@ class OverviewViewController: BaseViewController {
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-            self.overviewModel = OverviewModel.init(fromJson: response["data"])
-                self.updateUIView()
+                self.overviewViewModel = OverviewViewModel.init(response)
             }
         })
     }
-    func updateUIView() {
-        if let overView = overviewModel
-        {
-        if let image = overView.imageUrl {
-            let url = URL(string: image)!
-            overviewUserImageView.af_setImage(withURL: url)
-        }
-        if let overViewContent = overView.overView
-        {
-       
-            let htmlString = overViewContent
-            overviewWebview.loadHTMLString(htmlString, baseURL: nil)
-        }
-        }
-    }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

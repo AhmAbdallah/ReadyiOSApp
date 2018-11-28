@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWA-ZG-QKY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWA-ZG-QKY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,7 +58,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qw1-QL-J8Q"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Work" image="ic-Work" id="cbT-9b-01J"/>
+                    <tabBarItem key="tabBarItem" title="Work" id="cbT-9b-01J"/>
                     <navigationItem key="navigationItem" id="CPA-D6-kqo"/>
                     <connections>
                         <outlet property="workTableView" destination="A6a-dy-Y4I" id="yD6-ef-xaC"/>
@@ -199,7 +199,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-5W-YmY">
-                                <rect key="frame" x="138" y="45" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="45" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="bFE-RV-Ydy"/>
                                     <constraint firstAttribute="width" constant="100" id="mRC-PY-daF"/>
@@ -241,12 +241,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LunchScreen" width="1004" height="1504"/>
-        <image name="ic-Contact" width="25" height="25"/>
-        <image name="ic-Education" width="40" height="40"/>
-        <image name="ic-Overview" width="25" height="25"/>
-        <image name="ic-Skills" width="40" height="40"/>
-        <image name="ic-Work" width="25" height="25"/>
+        <image name="LunchScreen" width="16" height="16"/>
+        <image name="ic-Contact" width="37.5" height="37.5"/>
+        <image name="ic-Education" width="60" height="60"/>
+        <image name="ic-Overview" width="37.5" height="37.5"/>
+        <image name="ic-Skills" width="60" height="60"/>
         <image name="menu" width="16" height="16"/>
         <image name="shoppingBag" width="16" height="16"/>
     </resources>

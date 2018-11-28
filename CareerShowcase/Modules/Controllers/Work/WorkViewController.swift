@@ -11,12 +11,18 @@ import UIKit
 class WorkViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var workTableView: UITableView!
-    var workModel : [WorkModel]? = []
+    var workViewModel : WorkViewModel!{
+        didSet{
+            
+            self.workTableView.delegate = self
+            self.workTableView.dataSource = self
+            self.workTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
+            self.workTableView.reloadData()
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.workTableView.delegate = self
-        self.workTableView.dataSource = self
-        self.workTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
         getWorkData()
         
     }
@@ -28,8 +34,7 @@ class WorkViewController: BaseViewController, UITableViewDataSource, UITableView
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-                self.workModel = WorkModel.workFrom(json: response)
-                self.workTableView.reloadData()
+                self.workViewModel = WorkViewModel.init(response)
             }
         })
     }
@@ -46,26 +51,20 @@ class WorkViewController: BaseViewController, UITableViewDataSource, UITableView
         
         let eductionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EductionTableViewCell", for: indexPath) as! EductionTableViewCell
         eductionTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let edu = self.workModel?[indexPath.row]
+        if let work = self.workViewModel?.getWork(row: indexPath.row)
         {
-            if let name = edu.name
-            {
-                eductionTableViewCell.educationNameLBL.text = name
-            }
-            if let description = edu.descriptionField
-            {
-                eductionTableViewCell.educationDescriptionLBL.text = description
-            }
-            if let period = edu.period
-            {
-                eductionTableViewCell.educationDurationLBL.text = period
-            }
+            let name = work.0
+            eductionTableViewCell.educationNameLBL.text = name
+            let description = work.1
+            eductionTableViewCell.educationDescriptionLBL.text = description
+            let period = work.2
+            eductionTableViewCell.educationDurationLBL.text = period
         }
         return eductionTableViewCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let count = self.workModel?.count
+        if let count = self.workViewModel?.count
         {
             return count
         }

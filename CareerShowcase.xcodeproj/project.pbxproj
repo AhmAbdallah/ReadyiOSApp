@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1C6D6AC2C24BF2AC914BF2D8 /* Pods_CareerShowcaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540AA2B113262D7AB33840F5 /* Pods_CareerShowcaseTests.framework */; };
 		28F8E91F621C69B6C3D804E8 /* Pods_CareerShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35C4F4C41E4C7BE109E3A142 /* Pods_CareerShowcase.framework */; };
+		873773BD21AEC5F400A8A12E /* ContactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873773BC21AEC5ED00A8A12E /* ContactViewModel.swift */; };
+		873773BF21AEC61A00A8A12E /* EducationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873773BE21AEC61A00A8A12E /* EducationViewModel.swift */; };
+		873773C121AEC64000A8A12E /* OverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873773C021AEC64000A8A12E /* OverviewViewModel.swift */; };
+		873773C321AEC65B00A8A12E /* SkillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873773C221AEC65B00A8A12E /* SkillsViewModel.swift */; };
+		873773C521AEC67100A8A12E /* WorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873773C421AEC67100A8A12E /* WorkViewModel.swift */; };
 		C72CD9F2218291CB004DA86E /* EducationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F1218291CB004DA86E /* EducationModel.swift */; };
 		C72CD9F4218297D2004DA86E /* EducationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F3218297D2004DA86E /* EducationViewController.swift */; };
 		C72CD9F621829C73004DA86E /* WorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72CD9F521829C73004DA86E /* WorkModel.swift */; };
@@ -74,6 +79,11 @@
 		48D2BCDF2DC079BFEAE72EC8 /* Pods-CareerShowcase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerShowcase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareerShowcase/Pods-CareerShowcase.debug.xcconfig"; sourceTree = "<group>"; };
 		4CB8211227D95573A03F83D3 /* Pods-CareerShowcase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareerShowcase.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareerShowcase/Pods-CareerShowcase.release.xcconfig"; sourceTree = "<group>"; };
 		540AA2B113262D7AB33840F5 /* Pods_CareerShowcaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareerShowcaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		873773BC21AEC5ED00A8A12E /* ContactViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewModel.swift; sourceTree = "<group>"; };
+		873773BE21AEC61A00A8A12E /* EducationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationViewModel.swift; sourceTree = "<group>"; };
+		873773C021AEC64000A8A12E /* OverviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewModel.swift; sourceTree = "<group>"; };
+		873773C221AEC65B00A8A12E /* SkillsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsViewModel.swift; sourceTree = "<group>"; };
+		873773C421AEC67100A8A12E /* WorkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkViewModel.swift; sourceTree = "<group>"; };
 		C72CD9F1218291CB004DA86E /* EducationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationModel.swift; sourceTree = "<group>"; };
 		C72CD9F3218297D2004DA86E /* EducationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EducationViewController.swift; sourceTree = "<group>"; };
 		C72CD9F521829C73004DA86E /* WorkModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkModel.swift; sourceTree = "<group>"; };
@@ -261,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DA8C1A2182548000656E5C /* OverviewViewController.swift */,
+				873773C021AEC64000A8A12E /* OverviewViewModel.swift */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -269,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DA8C1C2182548100656E5C /* SkillsViewController.swift */,
+				873773C221AEC65B00A8A12E /* SkillsViewModel.swift */,
 			);
 			path = Skills;
 			sourceTree = "<group>";
@@ -277,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DA8C1E2182548100656E5C /* ContactViewController.swift */,
+				873773BC21AEC5ED00A8A12E /* ContactViewModel.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -285,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				C72CD9F3218297D2004DA86E /* EducationViewController.swift */,
+				873773BE21AEC61A00A8A12E /* EducationViewModel.swift */,
 				C7DA8C202182548100656E5C /* EductionTableViewCell.xib */,
 				C7DA8C212182548100656E5C /* EductionTableViewCell.swift */,
 			);
@@ -295,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				C7DA8C252182548100656E5C /* WorkViewController.swift */,
+				873773C421AEC67100A8A12E /* WorkViewModel.swift */,
 			);
 			path = Work;
 			sourceTree = "<group>";
@@ -598,19 +613,23 @@
 				C7DA8C3B21826B5900656E5C /* SplashScreenViewController.swift in Sources */,
 				C7F40E3120E03EBC0003C671 /* UIImageViewExtension.swift in Sources */,
 				C7A3DFF920D70126009E6B5E /* Reachability.swift in Sources */,
+				873773C321AEC65B00A8A12E /* SkillsViewModel.swift in Sources */,
 				C7DA8C2D2182548100656E5C /* WorkViewController.swift in Sources */,
 				C72CD9F821829FDC004DA86E /* SkillsModel.swift in Sources */,
 				C72CD9F621829C73004DA86E /* WorkModel.swift in Sources */,
 				C7F40E3320E03EBC0003C671 /* UIViewExtension.swift in Sources */,
 				C7F40E3420E03EBC0003C671 /* URLExtension.swift in Sources */,
 				C7A3DFC120D6EEA3009E6B5E /* AppDelegate.swift in Sources */,
+				873773BD21AEC5F400A8A12E /* ContactViewModel.swift in Sources */,
 				C7DA8C262182548100656E5C /* OverviewViewController.swift in Sources */,
 				C7F40E3820E03EBC0003C671 /* AlertControllerHelper.swift in Sources */,
+				873773C521AEC67100A8A12E /* WorkViewModel.swift in Sources */,
 				C7DA8C272182548100656E5C /* SkillsViewController.swift in Sources */,
 				C7A3DFF620D6F77B009E6B5E /* BaseNavigationController.swift in Sources */,
 				C7F40E3620E03EBC0003C671 /* StringExtension.swift in Sources */,
 				C72CD9FA2182A2B4004DA86E /* ContactModel.swift in Sources */,
 				C79176DB20DAFB87000629C9 /* ServiceConnector.swift in Sources */,
+				873773C121AEC64000A8A12E /* OverviewViewModel.swift in Sources */,
 				C7F40E3720E03EBC0003C671 /* UIScrollViewExtension.swift in Sources */,
 				C72CD9F4218297D2004DA86E /* EducationViewController.swift in Sources */,
 				C7F40E2F20E03EBC0003C671 /* UITableViewCellExtension.swift in Sources */,
@@ -618,6 +637,7 @@
 				C7F40E3520E03EBC0003C671 /* UIDeviceExtension.swift in Sources */,
 				C7F40E3020E03EBC0003C671 /* ExtensionNotification.swift in Sources */,
 				C7F40E2E20E03EBC0003C671 /* Constants.swift in Sources */,
+				873773BF21AEC61A00A8A12E /* EducationViewModel.swift in Sources */,
 				C7E44668218272F000B73E7B /* OverviewModel.swift in Sources */,
 				C7BBB33920E442BE00FA1AEF /* BaseTabBarController.swift in Sources */,
 				C72CD9F2218291CB004DA86E /* EducationModel.swift in Sources */,
@@ -909,7 +929,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NG2S54ZZC4;
+				DEVELOPMENT_TEAM = Q8XE645338;
 				INFOPLIST_FILE = CareerShowcaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -931,7 +951,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NG2S54ZZC4;
+				DEVELOPMENT_TEAM = Q8XE645338;
 				INFOPLIST_FILE = CareerShowcaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -952,7 +972,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NG2S54ZZC4;
+				DEVELOPMENT_TEAM = Q8XE645338;
 				INFOPLIST_FILE = CareerShowcaseUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -973,7 +993,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NG2S54ZZC4;
+				DEVELOPMENT_TEAM = Q8XE645338;
 				INFOPLIST_FILE = CareerShowcaseUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

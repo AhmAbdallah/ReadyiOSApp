@@ -11,14 +11,21 @@ import UIKit
 class EducationViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var educationTableView: UITableView!
-    var educationModel : [EducationModel]? = []
+    var educationViewModel : EducationViewModel!{
+        didSet{
+            
+            self.educationTableView.delegate = self
+            self.educationTableView.dataSource = self
+            self.educationTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
+            self.educationTableView.reloadData()
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.educationTableView.delegate = self
-        self.educationTableView.dataSource = self
-        self.educationTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
+        
         getEducationData()
-
+        
     }
     func getEducationData()
     {
@@ -28,13 +35,13 @@ class EducationViewController: BaseViewController, UITableViewDataSource, UITabl
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-                self.educationModel = EducationModel.educationFrom(json: response)
-                self.educationTableView.reloadData()
+                self.educationViewModel = EducationViewModel.init(response)
+                
             }
         })
     }
     override func viewWillAppear(_ animated: Bool) {
-       
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,26 +53,20 @@ class EducationViewController: BaseViewController, UITableViewDataSource, UITabl
         
         let eductionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EductionTableViewCell", for: indexPath) as! EductionTableViewCell
         eductionTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let edu = self.educationModel?[indexPath.row]
+        if let eduction = self.educationViewModel?.getEducation(row: indexPath.row)
         {
-            if let name = edu.name
-            {
+            let name = eduction.0
             eductionTableViewCell.educationNameLBL.text = name
-            }
-            if let description = edu.descriptionField
-            {
-                eductionTableViewCell.educationDescriptionLBL.text = description
-            }
-            if let period = edu.period
-            {
-                eductionTableViewCell.educationDurationLBL.text = period
-            }
+            let description = eduction.1
+            eductionTableViewCell.educationDescriptionLBL.text = description
+            let period = eduction.2
+            eductionTableViewCell.educationDurationLBL.text = period
         }
         return eductionTableViewCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let count = self.educationModel?.count
+        if let count = self.educationViewModel?.count
         {
             return count
         }
@@ -75,11 +76,11 @@ class EducationViewController: BaseViewController, UITableViewDataSource, UITabl
         return 1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
     }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 65
-//    }
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //        return 65
+    //    }
     /*
      // MARK: - Navigation
      

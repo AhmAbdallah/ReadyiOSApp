@@ -12,12 +12,21 @@ import UIKit
 class ContactViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var contactTableView: UITableView!
-    var contactModel : [ContactModel]? = []
+    var contactViewModel: ContactViewModel!{
+        
+        didSet{
+            
+            self.contactTableView.delegate = self
+            self.contactTableView.dataSource = self
+            self.contactTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
+            self.contactTableView.reloadData()
+            
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.contactTableView.delegate = self
-        self.contactTableView.dataSource = self
-        self.contactTableView    .register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
+        
         getSkillsData()
         
     }
@@ -29,8 +38,8 @@ class ContactViewController: BaseViewController, UITableViewDataSource, UITableV
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-                self.contactModel = ContactModel.contactFrom(json: response)
-                self.contactTableView.reloadData()
+                self.contactViewModel = ContactViewModel.init(response)
+                
             }
         })
     }
@@ -47,26 +56,20 @@ class ContactViewController: BaseViewController, UITableViewDataSource, UITableV
         
         let eductionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EductionTableViewCell", for: indexPath) as! EductionTableViewCell
         eductionTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let edu = self.contactModel?[indexPath.row]
+        if let contact = self.contactViewModel?.getContact(row: indexPath.row)
         {
-            if let name = edu.name
-            {
-                eductionTableViewCell.educationNameLBL.text = name
-            }
-            if let description = edu.descriptionField
-            {
-                eductionTableViewCell.educationDescriptionLBL.text = description
-            }
-            if let period = edu.period
-            {
-                eductionTableViewCell.educationDurationLBL.text = period
-            }
+            let name = contact.0
+            eductionTableViewCell.educationNameLBL.text = name
+            let description = contact.1
+            eductionTableViewCell.educationDescriptionLBL.text = description
+            let period = contact.2
+            eductionTableViewCell.educationDurationLBL.text = period
         }
         return eductionTableViewCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let count = self.contactModel?.count
+        if let count = self.contactViewModel.count
         {
             return count
         }
