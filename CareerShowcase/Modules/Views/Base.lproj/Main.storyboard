@@ -76,13 +76,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-q3-6bG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wJH-q3-6bG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wJH-q3-6bG" firstAttribute="trailing" secondItem="ZAF-9k-BSN" secondAttribute="trailing" id="4ME-gK-vOT"/>
+                            <constraint firstItem="wJH-q3-6bG" firstAttribute="top" secondItem="ZAF-9k-BSN" secondAttribute="top" id="FRc-YX-VWq"/>
+                            <constraint firstItem="wJH-q3-6bG" firstAttribute="bottom" secondItem="ZAF-9k-BSN" secondAttribute="bottom" id="YTv-hb-7nA"/>
+                            <constraint firstItem="wJH-q3-6bG" firstAttribute="leading" secondItem="ZAF-9k-BSN" secondAttribute="leading" id="b0X-2c-1XS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAF-9k-BSN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Skills" image="ic-Skills" id="lcS-g8-Ndx"/>
@@ -241,7 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LunchScreen" width="16" height="16"/>
+        <image name="LunchScreen" width="0.0" height="0.0"/>
         <image name="ic-Contact" width="37.5" height="37.5"/>
         <image name="ic-Education" width="60" height="60"/>
         <image name="ic-Overview" width="37.5" height="37.5"/>
