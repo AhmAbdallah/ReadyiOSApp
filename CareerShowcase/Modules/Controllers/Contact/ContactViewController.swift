@@ -10,25 +10,18 @@ import UIKit
 
 
 class ContactViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
-    
     @IBOutlet weak var contactTableView: UITableView!
-    var contactViewModel: ContactViewModel!{
-        
+    var contactViewModel: [ContactViewModel]!{
         didSet{
-            
             self.contactTableView.delegate = self
             self.contactTableView.dataSource = self
             self.contactTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
             self.contactTableView.reloadData()
-            
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getSkillsData()
-        
     }
     func getSkillsData()
     {
@@ -38,42 +31,20 @@ class ContactViewController: BaseViewController, UITableViewDataSource, UITableV
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-                self.contactViewModel = ContactViewModel.init(response)
-                
+                self.contactViewModel = ContactViewModel.addContacts(json: response)
             }
         })
     }
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     // MARK: - UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let eductionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EductionTableViewCell", for: indexPath) as! EductionTableViewCell
         eductionTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let contact = self.contactViewModel?.getContact(row: indexPath.row)
-        {
-            let name = contact.0
-            eductionTableViewCell.educationNameLBL.text = name
-            let description = contact.1
-            eductionTableViewCell.educationDescriptionLBL.text = description
-            let period = contact.2
-            eductionTableViewCell.educationDurationLBL.text = period
-        }
+        eductionTableViewCell.contactViewModel = self.contactViewModel?[indexPath.row]
         return eductionTableViewCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if let count = self.contactViewModel.count
-        {
-            return count
-        }
-        return 0
+        let count = self.contactViewModel.count
+        return count
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -84,14 +55,4 @@ class ContactViewController: BaseViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

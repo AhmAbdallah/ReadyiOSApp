@@ -10,20 +10,20 @@ import Foundation
 import SwiftyJSON
 
 class SkillsViewModel {
-    
-    private var skillsModel : [SkillsModel]? = []
-    
-    init(_ response: JSON) {
+    var name: String
+    var descriptionField: String
+    var period: String
+    private var skillsModel :SkillsModel?
+    init(response: JSON) {
         
-        skillsModel = SkillsModel.skillsFrom(json: response)
+        skillsModel = SkillsModel.init(fromJson: response)
+        name = (skillsModel?.name)!
+        descriptionField = (skillsModel?.descriptionField)!
+        period = (skillsModel?.period)!
     }
-    func getSkill(row: Int) ->  (name: String, description: String, period: String){
-        let skill = skillsModel![row]
-        return (skill.name!, skill.descriptionField!, skill.period!)
-    }
-    var count: Int? {
-        
-        return skillsModel?.count
-        
-    }
-}
+    static func getSkills(json: JSON) -> [SkillsViewModel] {
+        var skillsArray : [SkillsViewModel] = []
+        let jsonArray = json["data"].arrayValue
+        skillsArray = jsonArray.map{SkillsViewModel.init(response: $0)}
+        return skillsArray
+    }}

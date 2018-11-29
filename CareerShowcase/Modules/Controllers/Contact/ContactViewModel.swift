@@ -10,18 +10,20 @@ import Foundation
 import SwiftyJSON
 
 class ContactViewModel {
-    
-    private var contactModel : [ContactModel]? = []
+    var name: String
+    var descriptionField: String
+    var period: String
+    private var contactModel : ContactModel?
     init(_ response: JSON) {
-        self.contactModel = ContactModel.contactFrom(json: response)
+        contactModel = ContactModel.init(fromJson: response)
+        name = (contactModel?.name)!
+        descriptionField = (contactModel?.descriptionField)!
+        period = (contactModel?.period)!
     }
-    func getContact(row: Int) ->  (name: String, description: String, period: String){
-        let contact = self.contactModel![row]
-        return (contact.name!, contact.descriptionField!, contact.period!)
-    }
-    var count: Int? {
-        
-            return self.contactModel?.count
-        
+    static func addContacts(json: JSON?) -> [ContactViewModel] {
+        var contactViewModel : [ContactViewModel] = []
+        let jsonArray = json!["data"].arrayValue
+        contactViewModel = jsonArray.map{ContactViewModel.init($0)}
+        return contactViewModel
     }
 }

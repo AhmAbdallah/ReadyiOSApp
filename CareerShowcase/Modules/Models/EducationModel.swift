@@ -84,15 +84,5 @@ class EducationModel : NSObject, NSCoding{
 		}
 
 	}
-    static func educationFrom(json: JSON?) -> [EducationModel]! {
-        var education = [EducationModel]()
-        if let j = json {
-            let jsonArray = j["data"].arrayValue
-            for edu in jsonArray {
-                education.append(EducationModel(fromJson: edu))
-            }
-        }
-        return education
-    }
 
 }

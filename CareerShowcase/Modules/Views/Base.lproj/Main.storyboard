@@ -246,7 +246,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LunchScreen" width="0.0" height="0.0"/>
+        <image name="LunchScreen" width="16" height="16"/>
         <image name="ic-Contact" width="37.5" height="37.5"/>
         <image name="ic-Education" width="60" height="60"/>
         <image name="ic-Overview" width="37.5" height="37.5"/>

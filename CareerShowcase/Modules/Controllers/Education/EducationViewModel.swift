@@ -10,20 +10,23 @@ import Foundation
 import SwiftyJSON
 
 class EducationViewModel {
+    var name: String
+    var descriptionField: String
+    var period: String
+    private var educationModel : EducationModel?
     
-    private var educationModel : [EducationModel]? = []
+    init(response: JSON) {
+        
+        educationModel = EducationModel.init(fromJson: response)
+        name = (educationModel?.name)!
+        descriptionField = (educationModel?.descriptionField)!
+        period = (educationModel?.period)!
+    }
+    static func addEducation(json: JSON) -> [EducationViewModel] {
+        var educationArray : [EducationViewModel] = []
+        let jsonArr = json["data"].arrayValue
+        educationArray = jsonArr.map{EducationViewModel.init(response: $0)}
+        return educationArray
+    }
     
-    init(_ response: JSON) {
-        
-        self.educationModel = EducationModel.educationFrom(json: response)
-    }
-    func getEducation(row: Int) ->  (name: String, description: String, period: String){
-        let edu = self.educationModel![row]
-        return (edu .name!, edu.descriptionField!, edu.period!)
-    }
-    var count: Int? {
-        
-        return self.educationModel?.count
-        
-    }
 }

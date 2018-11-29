@@ -11,14 +11,12 @@ import UIKit
 class SkillsViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var skillsTableView: UITableView!
-    var skillsViewModel : SkillsViewModel!{
+    var skillsViewModel : [SkillsViewModel]!{
         didSet{
-            
             self.skillsTableView.delegate = self
             self.skillsTableView.dataSource = self
             self.skillsTableView.register(UINib(nibName: "EductionTableViewCell", bundle: nil), forCellReuseIdentifier: "EductionTableViewCell")
             self.skillsTableView.reloadData()
-            
         }
     }
     override func viewDidLoad() {
@@ -33,36 +31,23 @@ class SkillsViewController: BaseViewController, UITableViewDataSource, UITableVi
             self.stopAnimating()
             if (response["status"]).int == 200
             {
-                self.skillsViewModel = SkillsViewModel.init(response)
+                self.skillsViewModel = SkillsViewModel.getSkills(json: response)
             }
         })
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     // MARK: - UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let eductionTableViewCell = tableView.dequeueReusableCell(withIdentifier: "EductionTableViewCell", for: indexPath) as! EductionTableViewCell
         eductionTableViewCell.selectionStyle = UITableViewCellSelectionStyle.none
-        if let skill = self.skillsViewModel?.getSkill(row: indexPath.row)
-        {
-            let name = skill.0
-            eductionTableViewCell.educationNameLBL.text = name
-            let description = skill.1
-            eductionTableViewCell.educationDescriptionLBL.text = description
-            let period = skill.2
-            eductionTableViewCell.educationDurationLBL.text = period
-        }
+        let skill = self.skillsViewModel?[indexPath.row]
+        eductionTableViewCell.skillsViewModel = skill
         return eductionTableViewCell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let count = self.skillsViewModel?.count
-        {
-            return count
-        }
-        return 0
+        let count = self.skillsViewModel?.count
+        return count!
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

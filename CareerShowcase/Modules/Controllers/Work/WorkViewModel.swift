@@ -10,20 +10,21 @@ import Foundation
 import SwiftyJSON
 
 class WorkViewModel {
-    
-    private var workModel : [WorkModel]? = []
+    var name: String
+    var descriptionField: String
+    var period: String
+    private var workModel : WorkModel?
     
     init(_ response: JSON) {
-        
-        workModel = WorkModel.workFrom(json: response)
+        workModel = WorkModel.init(fromJson: response)
+        name = (workModel?.name)!
+        descriptionField = (workModel?.descriptionField)!
+        period = (workModel?.period)!
     }
-    func getWork(row: Int) ->  (name: String, description: String, period: String){
-        let work = workModel![row]
-        return (work.name!, work.descriptionField!, work.period!)
-    }
-    var count: Int? {
-        
-        return workModel?.count
-        
+    static func getWork(json: JSON) -> [WorkViewModel] {
+        var workArray : [WorkViewModel] = []
+        let jsonArray = json["data"].arrayValue
+        workArray = jsonArray.map{WorkViewModel.init($0)}
+        return workArray
     }
 }
