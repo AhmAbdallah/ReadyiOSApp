@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import CareerShowcase
+@testable import SwiftyJSON
 
 class CareerShowcaseTests: XCTestCase {
     
@@ -31,6 +32,19 @@ class CareerShowcaseTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    func testWork()  {
+        var json : [Any] = []
+            let dict = [
+            "name": "iOS Developer",
+            "description": "Mga BiliÅŸim Ltd. Åžti.",
+            "period": "Apr 2018 â€“ Present",
+            "id": 0
+                ] as [String : Any]
+        json.append(dict)
+        let j = JSON.init(json)
+        let workViewModel = WorkViewModel(j)
+        XCTAssertEqual(workViewModel.name, "a")
     }
     
 }
